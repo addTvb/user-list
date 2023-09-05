@@ -2,7 +2,6 @@ import { UserContext } from 'app/UserContext';
 import { useContext, useRef } from 'react';
 import { TableRow } from 'components/TableRow/TableRow';
 import { User } from 'types/user';
-import { useClickOutside } from 'hooks/useClickOutside';
 
 import './Table.css';
 
@@ -10,10 +9,8 @@ export const Table = () => {
 	const { users, setSelected } = useContext(UserContext);
 
 	const handleSelect = (user: User) => setSelected(user);
-	const resetSelect = () => setSelected(null);
 
 	const tableRef = useRef(null);
-	useClickOutside(tableRef, resetSelect);
 
 	return (
 		<div className='table-wrapper' ref={tableRef}>

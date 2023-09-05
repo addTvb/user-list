@@ -37,7 +37,9 @@ export const Form = () => {
 		if (theme === 'light') setTheme('dark');
 	};
 	const handleDelete = () => {
-		if (selected) {
+		if (selected !== null) {
+			console.log(selected);
+			
 			const filtered = users.filter((user) => {
 				if (user.id !== selected.id) return user;
 			});

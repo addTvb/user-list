@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import './Select.css';
 import clsx from 'clsx';
-import { useClickOutside } from 'hooks/useClickOutside';
+import { useOnClickOutside } from 'usehooks-ts';
 import { ChangeFunction } from 'types/base';
 
 interface Option {
@@ -27,7 +27,7 @@ export const Select = (props: SelectProps) => {
 	};
 
 	const selectRef = useRef(null);
-	useClickOutside(selectRef, handleClose);
+	useOnClickOutside(selectRef, handleClose);
 
 	return (
 		<div className='select-wrapper' ref={selectRef}>
