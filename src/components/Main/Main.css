@@ -1,0 +1,29 @@
+.wrapper[data-theme='dark'] {
+    --primary: #282828;
+    --secondary: #fafafa;
+    --gray: #5c5c5c;
+    --green: #228d3d;
+}
+
+.wrapper[data-theme='light'] {
+    --primary: #fafafa;
+    --secondary: #282828;
+    --gray: #a3a3a3;
+    --green: #228d3d;
+}
+.wrapper {
+    display: flex;
+    height: 100vh;
+    background-color: var(--primary);
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    transition: background-color 0.2s;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 50vw;
+}

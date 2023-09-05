@@ -1,0 +1,4 @@
+.table-row.selected {
+    background: var(--green);
+    color: #fff;
+}

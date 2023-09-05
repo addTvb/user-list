@@ -1,0 +1,33 @@
+.form-wrapper {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    padding: 10px;
+    gap: 20px;
+}
+
+.form-wrapper legend {
+    margin-left: 20px;
+}
+.form-top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-bottom {
+    align-items: flex-start;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form-wrapper .line {
+    width: 80%;
+    height: 1px;
+    background: var(--gray);
+}

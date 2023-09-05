@@ -5,13 +5,17 @@ import { User } from 'types/user';
 const loadData = JSON.parse(JSON.stringify(jsonData));
 
 interface IUserContext {
-	user: User[];
-	setUser: Dispatch<SetStateAction<User[]>>;
+	users: User[];
+	setUser: (users: User[]) => void;
 	loading: boolean;
+	selected: User | null;
+	setSelected: Dispatch<SetStateAction<User | null>>;
 }
 
 export const UserContext = createContext<IUserContext>({
-	user: loadData,
+	users: loadData,
 	setUser: () => {},
 	loading: true,
+	selected: null,
+	setSelected: () => {},
 });
